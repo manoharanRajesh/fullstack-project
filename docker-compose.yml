@@ -1,0 +1,43 @@
+version: '3'
+services:
+  nginx:
+    container_name: some-nginx
+    image: nginx:1.13
+    restart: always
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./ui/dist/project-manager:/static
+  tm-mongo:
+    container_name: tm-mongo
+    image: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=user_db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles
+  app:
+    image: manoharanrajesh/project-manager-service:0.0.1-SNAPSHOT
+    restart: always
+    working_dir: /tasks
+    environment:
+      - spring.data.mongodb.host=tm-mongo
+      - spring.data.mongodb.authentication-database=admin
+      - spring.data.mongodb.username=root
+      - spring.data.mongodb.password=example
+      - spring.data.mongodb.database=user_db
+      - spring.data.mongodb.port=27017
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    depends_on:
+      - nginx
+      - tm-mongo

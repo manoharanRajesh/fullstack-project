@@ -1,0 +1,13 @@
+ace-editor:latest
+ant:latest
+saferestart:latest
+workflow-step-api:latest
+token-macro:latest
+command-launcher:latest
+bouncycastle-api:latest
+script-security:latest
+structs:latest
+credentials:latest
+cloudfoundry:latest
+workflow-remote-loader:latest
+swarm:3.12

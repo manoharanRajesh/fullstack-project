@@ -1,0 +1,11 @@
+{
+  "name": "project-manager-ui",
+  "version": "1.0.0",
+  "description": "ui for project manager for CRUD (add, edit & view) User, Project & Task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

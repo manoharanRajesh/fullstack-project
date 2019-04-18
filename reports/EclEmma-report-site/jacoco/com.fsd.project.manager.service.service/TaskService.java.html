@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaskService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">service</a> &gt; <a href="index.source.html" class="el_package">com.fsd.project.manager.service.service</a> &gt; <span class="el_source">TaskService.java</span></div><h1>TaskService.java</h1><pre class="source lang-java linenums">package com.fsd.project.manager.service.service;
+
+import com.fsd.project.manager.service.dao.TaskRepository;
+import com.fsd.project.manager.service.dao.data.Project;
+import com.fsd.project.manager.service.dao.data.Task;
+import com.fsd.project.manager.service.dao.data.User;
+import com.fsd.project.manager.service.service.translator.TaskTranslate;
+import com.fsd.project.manager.service.view.TaskModel;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+
+<span class="fc" id="L20">public class TaskService {</span>
+
+    @Autowired
+    TaskTranslate taskTranslate;
+    @Autowired
+    TaskRepository taskRepo;
+    @Autowired
+    UserService userService;
+    @Autowired
+    ProjectService projectService;
+
+    public List&lt;TaskModel&gt; get() {
+<span class="fc" id="L32">        return taskRepo.findAll()</span>
+<span class="fc" id="L33">                .stream()</span>
+<span class="fc" id="L34">                .map(u -&gt; taskTranslate.translate(u))</span>
+<span class="fc" id="L35">                .collect(Collectors.toList());</span>
+
+    }
+
+    public TaskModel get(String id) {
+<span class="fc" id="L40">        Optional&lt;Task&gt; task = getTask(id);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if (task.isPresent()) {</span>
+<span class="fc" id="L42">            return this.taskTranslate.translate(task.get());</span>
+        }
+<span class="fc" id="L44">        return null;</span>
+    }
+
+    @Transactional
+    public void create(TaskModel fromModel) {
+
+<span class="fc" id="L50">        User user = getUser(fromModel);</span>
+<span class="fc" id="L51">        Project project = getProject(fromModel);</span>
+<span class="fc" id="L52">        taskRepo.save(this.taskTranslate.translate(fromModel, project, user));</span>
+<span class="fc" id="L53">    }</span>
+
+    private Project getProject(TaskModel fromModel) {
+<span class="fc" id="L56">        Optional&lt;Project&gt; optProject = this.projectService.getFromDb(fromModel.getProject().getId());</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        return optProject.isPresent() ? optProject.get() : null;</span>
+    }
+
+    @Transactional
+    public void update(TaskModel fromModel) {
+<span class="fc" id="L62">        User user = getUser(fromModel);</span>
+<span class="fc" id="L63">        Project project = getProject(fromModel);</span>
+<span class="fc" id="L64">        Optional&lt;Task&gt; task = getTask(fromModel.getId());</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (task.isPresent()) {</span>
+<span class="fc" id="L66">            taskRepo.save(this.taskTranslate.translate(fromModel, task.get(), project, user));</span>
+        } else {
+<span class="fc" id="L68">            taskRepo.save(this.taskTranslate.translate(fromModel, project, user));</span>
+        }
+<span class="fc" id="L70">    }</span>
+
+    private User getUser(TaskModel fromModel) {
+<span class="fc" id="L73">        Optional&lt;User&gt; optUser = this.userService.getUser(fromModel.getUser().getEmpId());</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        return optUser.isPresent() ? optUser.get() : null;</span>
+    }
+
+    @Transactional
+    public void delete(String id) {
+<span class="fc" id="L79">        taskRepo.deleteById(id);</span>
+
+<span class="fc" id="L81">    }</span>
+
+    private Optional&lt;Task&gt; getTask(String id) {
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        if (StringUtils.isNotBlank(id)) {</span>
+<span class="fc" id="L85">            return taskRepo.findById(id);</span>
+        }
+<span class="fc" id="L87">        return Optional.empty();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

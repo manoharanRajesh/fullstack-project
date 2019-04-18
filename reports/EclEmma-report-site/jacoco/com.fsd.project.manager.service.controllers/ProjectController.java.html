@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProjectController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">service</a> &gt; <a href="index.source.html" class="el_package">com.fsd.project.manager.service.controllers</a> &gt; <span class="el_source">ProjectController.java</span></div><h1>ProjectController.java</h1><pre class="source lang-java linenums">package com.fsd.project.manager.service.controllers;
+
+import com.fsd.project.manager.service.service.ProjectService;
+import com.fsd.project.manager.service.view.ProjectModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@CrossOrigin
+@RestController
+@RequestMapping(&quot;/api/projects&quot;)
+<span class="fc" id="L14">public class ProjectController {</span>
+    @Autowired
+    ProjectService service;
+
+    @GetMapping
+    public List&lt;ProjectModel&gt; getTasks() {
+<span class="fc" id="L20">        return service.get();</span>
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public ProjectModel getTask(@PathVariable(value = &quot;id&quot;) String id) {
+<span class="fc" id="L25">        return service.get(id);</span>
+    }
+
+    @PostMapping
+    public void add(@RequestBody ProjectModel model) {
+<span class="fc" id="L30">        service.update(model);</span>
+<span class="fc" id="L31">    }</span>
+
+
+    @PostMapping(&quot;/delete&quot;)
+    public ResponseEntity delete(@RequestBody String id) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (id != null) {</span>
+<span class="fc" id="L37">            service.delete(id);</span>
+        }
+<span class="fc" id="L39">        return ResponseEntity.ok().build();</span>
+
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

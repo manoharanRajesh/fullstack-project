@@ -1,0 +1,7 @@
+description: |
+  Represents a scenario of sending request to /api/tasks
+request:
+  method: GET
+  url: /api/users
+response:
+  status: 200

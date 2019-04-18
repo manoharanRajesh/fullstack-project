@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">Add Task</div>
+        <div class="card-body">
+          <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+          <div *ngIf="f.form.inValid">
+          </div>
+            <!-- Task Title -->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" i18n="@@task.title">Task</span>
+              </div>
+              <input #title="ngModel" [(ngModel)]="task.title"
+                     class="form-control" name="title"
+                     [ngClass]="{ 'is-invalid': f.submitted && title.invalid }"
+                     required="required" minlength="1"
+                     required="required" maxlength="255"
+                     type="text"
+              />
+              <div *ngIf="f.submitted && title.invalid" >
+                <div *ngIf="title.errors.required">Title is required min 4 and max 255 characters .</div>
+              </div>
+            </div>
+          </div>
+            <!-- Task Priority -->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Priority</span>
+              </div>
+              <input #priority="ngModel" [(ngModel)]="task.priority" class="form-control"
+                     max="5" min="0" name="priority"
+                     [ngClass]="{ 'is-invalid': f.submitted && priority.invalid }"
+                     required
+                     type="range"/>
+              <div *ngIf="f.submitted && priority.invalid" >
+                <div *ngIf="priority.errors.required">priority is required.</div>
+              </div>
+            </div>
+          </div>
+            <!--Parent -->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Parent Task</span>
+              </div>
+              <select class="form-control" id="parentId" name="parentId" [(ngModel)]="parentId"
+                      (ngModelChange)="saveParentTask()">
+                <option *ngFor="let tsk of tasks"
+                        value="{{tsk.id}}">{{tsk.title}}</option>
+              </select>
+            </div>
+          </div>
+            <!-- Start Date-->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Start Date</span>
+              </div>
+              <input #startDate="ngModel" [(ngModel)]="task.startDate"
+                     class="form-control" name="stDate" type="date"
+                     [ngClass]="{ 'is-invalid': f.submitted && startDate.invalid }"
+                     required/>
+            </div>
+            <div *ngIf="f.submitted && startDate.invalid" >
+              <div *ngIf="startDate.errors.required">startDate is required.</div>
+            </div>
+          </div>
+            <!--End date -->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">End Date</span>
+              </div>
+              <input #endDate="ngModel"  [(ngModel)]="task.endDate" class="form-control" name="etDate" type="date"/>
+            </div>
+          </div>
+            <!--User -->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">User</span>
+              </div>
+              <select class="form-control" id="empId" name="empId" [(ngModel)]="empId" (ngModelChange)="saveUser()">
+                <option value="">Default select</option>
+                <option *ngFor="let user of users" value="{{user.empId}}">{{user.firstName}}-{{user.lastName}}</option>
+              </select>
+            </div>
+          </div>
+            <!-- Project-->
+          <div class="row col-sm-6 col-md-6 ">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Project</span>
+              </div>
+              <select class="form-control" id="projId" name="projId" [(ngModel)]="projId"
+                      (ngModelChange)="saveProject()">
+                <option value="">Default select</option>
+                <option *ngFor="let project of projects"
+                        value="{{project.id}}">{{project.title}}</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" type="submit" role="button" >save</button>
+            <a class="btn btn-primary" routerLink="/view" role="button" routerLinkActive="active">back</a>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

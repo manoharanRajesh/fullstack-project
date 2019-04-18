@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">First Name</span>
+          </div>
+          <input #firstName="ngModel" [(ngModel)]="user.firstName" class="form-control" name="firstName" type="text"
+                 [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+                 required/>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Last Name</span>
+          </div>
+          <input #lastName="ngModel" [(ngModel)]="user.lastName" class="form-control" name="lastName" type="text"
+                 [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }"
+                 required/>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Employee Id</span>
+          </div>
+          <input #empId="ngModel" [(ngModel)]="user.empId" class="form-control" name="empId" type="text"
+                 [ngClass]="{ 'is-invalid': f.submitted && empId.invalid }"
+                 disabled/>
+        </div>
+        <button class="btn btn-primary" type="submit" role="button" >{{btnTitle}}</button>
+        <a class="btn btn-primary" (click)="reset()" role="button">Reset</a>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+  <hr class="style11">
+
+      <a *ngFor="let usr of users">
+        <div class="row card">
+          <div class="card-header">{{usr.empId}}</div>
+          <div class="card-body">
+            <div>
+            {{usr.firstName}}
+            {{usr.lastName}}
+          </div>
+            <div>
+            <a class="btn btn-primary" (click)="edit(usr)" role="button">Edit</a>
+            <a class="btn btn-primary" (click)="delete(usr)" role="button">Delete</a>
+          </div>
+          </div>
+        </div>
+      </a>
+</div>

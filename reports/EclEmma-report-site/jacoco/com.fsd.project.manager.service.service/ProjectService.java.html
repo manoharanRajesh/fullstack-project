@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProjectService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">service</a> &gt; <a href="index.source.html" class="el_package">com.fsd.project.manager.service.service</a> &gt; <span class="el_source">ProjectService.java</span></div><h1>ProjectService.java</h1><pre class="source lang-java linenums">package com.fsd.project.manager.service.service;
+
+import com.fsd.project.manager.service.dao.ProjectRepository;
+import com.fsd.project.manager.service.dao.data.Project;
+import com.fsd.project.manager.service.dao.data.User;
+import com.fsd.project.manager.service.service.translator.ProjectTranslator;
+import com.fsd.project.manager.service.view.ProjectModel;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+@Transactional
+<span class="fc" id="L19">public class ProjectService {</span>
+
+    @Autowired
+    ProjectTranslator translator;
+    @Autowired
+    ProjectRepository projectRepo;
+    @Autowired
+    UserService userService;
+
+    public List&lt;ProjectModel&gt; get() {
+<span class="fc" id="L29">        return projectRepo.findAll()</span>
+<span class="fc" id="L30">                .stream()</span>
+<span class="fc" id="L31">                .map(u -&gt; translator.translate(u))</span>
+<span class="fc" id="L32">                .collect(Collectors.toList());</span>
+
+    }
+
+    public ProjectModel get(String id) {
+<span class="fc" id="L37">        Optional&lt;Project&gt; usrDoc = getFromDb(id);</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (usrDoc.isPresent()) {</span>
+<span class="fc" id="L39">            return this.translator.translate(usrDoc.get());</span>
+        }
+<span class="fc" id="L41">        return null;</span>
+    }
+
+    @Transactional
+    public void create(ProjectModel fromModel) {
+<span class="fc" id="L46">        Optional&lt;User&gt; optionalUser = this.userService.getUser(fromModel.getManager().getEmpId());</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        User manager = optionalUser.isPresent() ? optionalUser.get() : null;</span>
+<span class="fc" id="L48">        projectRepo.save(this.translator.translate(fromModel, manager));</span>
+<span class="fc" id="L49">    }</span>
+
+    @Transactional
+    public void update(ProjectModel fromModel) {
+<span class="fc" id="L53">        Optional&lt;Project&gt; usrDoc = getFromDb(fromModel.getId());</span>
+<span class="fc" id="L54">        Optional&lt;User&gt; optionalUser = this.userService.getUser(fromModel.getManager().getEmpId());</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        User manager = optionalUser.isPresent() ? optionalUser.get() : null;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        if (usrDoc.isPresent()) {</span>
+<span class="fc" id="L57">            Project p = this.translator.translate(fromModel, manager, usrDoc.get());</span>
+<span class="fc" id="L58">            projectRepo.save(p);</span>
+<span class="fc" id="L59">        } else {</span>
+<span class="fc" id="L60">            projectRepo.save(this.translator.translate(fromModel, manager));</span>
+        }
+<span class="fc" id="L62">    }</span>
+
+    @Transactional
+    public void delete(String id) {
+<span class="fc" id="L66">        projectRepo.deleteById(id);</span>
+
+<span class="fc" id="L68">    }</span>
+
+    public Optional&lt;Project&gt; getFromDb(String id) {
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (StringUtils.isNotBlank(id)) {</span>
+<span class="fc" id="L72">            return projectRepo.findById(id);</span>
+        }
+<span class="fc" id="L74">        return Optional.empty();</span>
+
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

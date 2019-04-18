@@ -1,0 +1,17 @@
+version: '2'
+services:
+  sonar:
+    container_name: sonar
+    image: sonarqube
+    ports:
+      - "9000:9000"
+    restart: always
+  jenkins:
+    hostname: jenkins.local
+    container_name: jenkins
+    image: manoharanrajesh/jenkins:v2
+    ports:
+      - 8085:8080
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+

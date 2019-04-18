@@ -1,0 +1,2023 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>project-manager documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">project-manager documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AddProjectComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/add-project/add-project.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-project</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./add-project.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./add-project.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#btnTitle">btnTitle</a>
+                            </li>
+                            <li>
+                                <a href="#empId">empId</a>
+                            </li>
+                            <li>
+                                <a href="#filteredPrj">filteredPrj</a>
+                            </li>
+                            <li>
+                                <a href="#filterStr">filterStr</a>
+                            </li>
+                            <li>
+                                <a href="#isDateChecked">isDateChecked</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mode">mode</a>
+                            </li>
+                            <li>
+                                <a href="#project">project</a>
+                            </li>
+                            <li>
+                                <a href="#projects">projects</a>
+                            </li>
+                            <li>
+                                <a href="#userName">userName</a>
+                            </li>
+                            <li>
+                                <a href="#users">users</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeChkBox">changeChkBox</a>
+                            </li>
+                            <li>
+                                <a href="#endProject">endProject</a>
+                            </li>
+                            <li>
+                                <a href="#getAllProject">getAllProject</a>
+                            </li>
+                            <li>
+                                <a href="#getAllUsers">getAllUsers</a>
+                            </li>
+                            <li>
+                                <a href="#isProjectExpired">isProjectExpired</a>
+                            </li>
+                            <li>
+                                <a href="#loadUsers">loadUsers</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSelectUser">onSelectUser</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit">onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#open">open</a>
+                            </li>
+                            <li>
+                                <a href="#reset">reset</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#resetFilter">resetFilter</a>
+                            </li>
+                            <li>
+                                <a href="#saveUser">saveUser</a>
+                            </li>
+                            <li>
+                                <a href="#sortByCompleted">sortByCompleted</a>
+                            </li>
+                            <li>
+                                <a href="#sortByEndDate">sortByEndDate</a>
+                            </li>
+                            <li>
+                                <a href="#sortByPriority">sortByPriority</a>
+                            </li>
+                            <li>
+                                <a href="#sortByStartDate">sortByStartDate</a>
+                            </li>
+                            <li>
+                                <a href="#update">update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(ref: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, userService: <a href="../injectables/UserService.html">UserService</a>, projectService: <a href="../injectables/ProjectService.html">ProjectService</a>, config: NgbModalConfig, modalService: NgbModal, locale: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/add-project/add-project.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ref</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>projectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProjectService.html" target="_self" >ProjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>config</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModalConfig</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locale</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeChkBox"></a>
+                    <span class="name">
+                        <b>
+                            changeChkBox
+                        </b>
+                        <a href="#changeChkBox"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeChkBox(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:188</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="endProject"></a>
+                    <span class="name">
+                        <b>
+                            endProject
+                        </b>
+                        <a href="#endProject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>endProject(p: <a href="../classes/Project.html">Project</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p</td>
+                                    <td>
+                                                <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllProject"></a>
+                    <span class="name">
+                        <b>
+                            getAllProject
+                        </b>
+                        <a href="#getAllProject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllProject()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllUsers"></a>
+                    <span class="name">
+                        <b>
+                            getAllUsers
+                        </b>
+                        <a href="#getAllUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isProjectExpired"></a>
+                    <span class="name">
+                        <b>
+                            isProjectExpired
+                        </b>
+                        <a href="#isProjectExpired"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isProjectExpired(p: <a href="../classes/Project.html">Project</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p</td>
+                                    <td>
+                                                <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUsers"></a>
+                    <span class="name">
+                        <b>
+                            loadUsers
+                        </b>
+                        <a href="#loadUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectUser"></a>
+                    <span class="name">
+                        <b>
+                            onSelectUser
+                        </b>
+                        <a href="#onSelectUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSelectUser(usr: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>usr</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="open"></a>
+                    <span class="name">
+                        <b>
+                            open
+                        </b>
+                        <a href="#open"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>open(content)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>content</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reset"></a>
+                    <span class="name">
+                        <b>
+                            reset
+                        </b>
+                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reset()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="161"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetFilter"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            resetFilter
+                        </b>
+                        <a href="#resetFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>resetFilter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveUser"></a>
+                    <span class="name">
+                        <b>
+                            saveUser
+                        </b>
+                        <a href="#saveUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortByCompleted"></a>
+                    <span class="name">
+                        <b>
+                            sortByCompleted
+                        </b>
+                        <a href="#sortByCompleted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortByCompleted()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:145</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortByEndDate"></a>
+                    <span class="name">
+                        <b>
+                            sortByEndDate
+                        </b>
+                        <a href="#sortByEndDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortByEndDate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortByPriority"></a>
+                    <span class="name">
+                        <b>
+                            sortByPriority
+                        </b>
+                        <a href="#sortByPriority"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortByPriority()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:139</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortByStartDate"></a>
+                    <span class="name">
+                        <b>
+                            sortByStartDate
+                        </b>
+                        <a href="#sortByStartDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortByStartDate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update(p: <a href="../classes/Project.html">Project</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/add-project/add-project.component.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p</td>
+                                    <td>
+                                                <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnTitle"></a>
+                        <span class="name">
+                            <b>
+                            btnTitle</b>
+                            <a href="#btnTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;Add&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/add-project/add-project.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="empId"></a>
+                        <span class="name">
+                            <b>
+                            empId</b>
+                            <a href="#empId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/add-project/add-project.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredPrj"></a>
+                        <span class="name">
+                            <b>
+                            filteredPrj</b>
+                            <a href="#filteredPrj"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Project.html" target="_self" >Project[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/add-project/add-project.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterStr"></a>
+                        <span class="name">
+                            <b>
+                            filterStr</b>
+                            <a href="#filterStr"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/add-project/add-project.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDateChecked"></a>
+                        <span class="name">
+                            <b>
+                            isDateChecked</b>
+                            <a href="#isDateChecked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/add-project/add-project.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            mode</b>
+                            <a href="#mode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>EventEmitter&lt;ProjectEvent&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new EventEmitter&lt;ProjectEvent&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/add-project/add-project.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="project"></a>
+                        <span class="name">
+                            <b>
+                            project</b>
+                            <a href="#project"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/add-project/add-project.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="projects"></a>
+                        <span class="name">
+                            <b>
+                            projects</b>
+                            <a href="#projects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Project.html" target="_self" >Project[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/add-project/add-project.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userName"></a>
+                        <span class="name">
+                            <b>
+                            userName</b>
+                            <a href="#userName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/add-project/add-project.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="users"></a>
+                        <span class="name">
+                            <b>
+                            users</b>
+                            <a href="#users"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/add-project/add-project.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {ChangeDetectorRef, Component, EventEmitter, Inject, LOCALE_ID, OnInit} from &#x27;@angular/core&#x27;;
+import {Project} from &#x27;../model/Project&#x27;;
+import {UserService} from &#x27;../services/user.service&#x27;;
+import {User} from &#x27;../model/User&#x27;;
+import { NgbModalConfig, NgbModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import {ProjectService} from &#x27;../services/project.service&#x27;;
+import * as moment from &#x27;moment&#x27;;
+import {formatDate} from &#x27;@angular/common&#x27;;
+import {ProjectEvent} from &#x27;./ProjectEvent&#x27;;
+
+
+@Component({
+  selector: &#x27;app-add-project&#x27;,
+  templateUrl: &#x27;./add-project.component.html&#x27;,
+  styleUrls: [&#x27;./add-project.component.css&#x27;]
+})
+export class AddProjectComponent implements OnInit {
+  public mode: EventEmitter&lt;ProjectEvent&gt; &#x3D; new EventEmitter&lt;ProjectEvent&gt;();
+  project: Project;
+  filteredPrj: Project[];
+  projects: Project[];
+  isDateChecked: boolean;
+  btnTitle &#x3D; &#x27;Add&#x27;;
+  empId: string;
+  users: User[];
+  filterStr: string;
+  userName  &#x3D; &#x27;&#x27;;
+
+  constructor(private ref: ChangeDetectorRef, private userService: UserService, private projectService: ProjectService,
+              config: NgbModalConfig, private modalService: NgbModal, @Inject(LOCALE_ID) private locale: string) {
+    this.empId &#x3D; &#x27;&#x27;;
+    this.project &#x3D; new Project(&#x27;&#x27;, &#x27;&#x27; , &#x27;&#x27; , 1 , null);
+    // customize default values of modals used by this component tree
+    config.backdrop &#x3D; &#x27;static&#x27;;
+    config.keyboard &#x3D; false;
+    this.mode.subscribe(
+      {
+        next: (event: ProjectEvent) &#x3D;&gt; {
+          console.log(&#x60;Received message #${event.mode}: ${event.message}&#x60;);
+          if (event.mode &#x3D;&#x3D;&#x3D; &#x27;RESET&#x27;) {
+            this.btnTitle &#x3D; &#x27;Add&#x27;;
+          }
+          if (event.mode &#x3D;&#x3D;&#x3D; &#x27;ADD&#x27;) {
+            this.btnTitle &#x3D; &#x27;Add&#x27;;
+          }
+          if (event.mode &#x3D;&#x3D;&#x3D; &#x27;UPDATE&#x27;) {
+            this.btnTitle &#x3D; &#x27;update&#x27;;
+          }
+        }
+      }
+    );
+
+  }
+
+
+  ngOnInit() {
+    this.getAllProject();
+    this.getAllUsers();
+  }
+
+  ngOnDestroy() {
+    this.mode.unsubscribe();
+  }
+
+   getAllProject()  {
+    this.projectService.get().subscribe( v &#x3D;&gt; {
+        console.log(this.projects);
+        this.projects &#x3D; v;
+        this.filteredPrj &#x3D; this.projects;
+        this.ref.detectChanges();
+      }
+    );
+  }
+
+
+
+   getAllUsers()  {
+    this.userService.get().subscribe( v &#x3D;&gt; {
+        this.users &#x3D; v;
+        this.ref.detectChanges();
+      }
+    );
+  }
+
+
+
+  onSubmit() {
+    console.log(this.project);
+    this.projectService.add(this.project)
+      .subscribe(
+        v &#x3D;&gt; {
+          this.getAllProject();
+          this.project &#x3D; new Project(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, 1, null);
+        }
+      );
+  }
+
+
+  loadUsers() {
+    this.userService.getUser(this.empId);
+
+  }
+
+  open(content) {
+    this.userService.get().subscribe( v &#x3D;&gt; {
+        this.users &#x3D; v;
+        this.modalService.open(content);
+        this.ref.detectChanges();
+      }
+    );
+  }
+
+  saveUser() {
+    this.project.manager &#x3D; this.users
+      .filter(u &#x3D;&gt; { if (u.empId &#x3D;&#x3D;&#x3D; this.empId) { return u; } }).map(u &#x3D;&gt; u)[0];
+    if (this.modalService.hasOpenModals()) { this.modalService.dismissAll(); }
+    this.userName &#x3D; this.project.manager.firstName + this.project.manager.lastName;
+    return true;
+  }
+
+  onSelectUser(usr: User) {
+    this.empId &#x3D; usr.empId;
+  }
+
+
+  // Sorting in ascending order by Start Date
+  sortByStartDate() {
+    this.filteredPrj &#x3D; this.projects.sort ((a: any, b: any) &#x3D;&gt;
+      new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+    );
+  }
+  // Sorting in ascending order by End Date
+  sortByEndDate() {
+    this.filteredPrj &#x3D; this.projects.sort ((a: any, b: any) &#x3D;&gt;
+      new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
+    );
+  }
+  // Sorting in descending order by Prority
+  sortByPriority() {
+    this.filteredPrj &#x3D; this.projects.sort ((a: any, b: any) &#x3D;&gt;
+      b.priority - a.priority
+    );
+  }
+  // Sorting in descending order by Completed (end date in desc order)
+  sortByCompleted() {
+    this.filteredPrj &#x3D; this.projects.filter(p &#x3D;&gt; this.isProjectExpired(p));
+    this.filteredPrj &#x3D; this.filteredPrj.sort ((a: any, b: any) &#x3D;&gt;
+      new Date(b.endDate).getTime() - new Date(a.endDate).getTime()
+    );
+  }
+
+  isProjectExpired(p: Project): boolean {
+    return moment(p.endDate).isBefore(moment());
+  }
+
+  async resetFilter() {
+    await this.getAllProject();
+    this.filteredPrj &#x3D; this.projects;
+  }
+
+  reset() {
+    this.project &#x3D; new Project(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, 1, null);
+    this.mode.emit(new ProjectEvent( &#x27;&#x27;, &#x27;ADD&#x27;));
+  }
+
+  update(p: Project ): void {
+    this.project.title &#x3D; p.title;
+    this.project.startDate &#x3D; p.startDate;
+    this.project.endDate &#x3D; p.endDate;
+    this.project.priority &#x3D; p.priority;
+    this.project.manager &#x3D; p.manager;
+    this.project.id &#x3D; p.id;
+    this.mode.emit(new ProjectEvent( &#x27;&#x27;, &#x27;UPDATE&#x27;));
+  }
+
+  endProject(p: Project): void {
+    p.endDate &#x3D; formatDate(new Date(), &#x27;yyyy-MM-dd&#x27;, this.locale);
+    this.projectService.update(p)
+      .subscribe(
+        value &#x3D;&gt; {
+          this.getAllProject();
+          this.filteredPrj &#x3D; this.projects;
+        }
+      );
+  }
+
+
+  changeChkBox(event) {
+    if (event.target.checked) {
+      this.isDateChecked &#x3D; true;
+      const today &#x3D; new Date();
+      const endDate &#x3D; new Date().setDate(today.getDate() + 1);
+
+      this.project.startDate &#x3D; formatDate(today, &#x27;yyyy-MM-dd&#x27;, this.locale);
+      this.project.endDate &#x3D; formatDate(endDate, &#x27;yyyy-MM-dd&#x27;, this.locale);
+    } else {
+      this.isDateChecked &#x3D; false;
+      this.project.startDate &#x3D; undefined;
+      this.project.endDate &#x3D; undefined;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-12&quot;&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot;&gt; Add Project&lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;form (ngSubmit)&#x3D;&quot;f.form.valid &amp;&amp; onSubmit()&quot; #f&#x3D;&quot;ngForm&quot;&gt;
+            &lt;!-- Project Title--&gt;
+            &lt;div class&#x3D;&quot;row col-sm-6 col-md-6 &quot;&gt;
+              &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                &lt;div class&#x3D;&quot;input-group-prepend&quot;&gt;
+                  &lt;span class&#x3D;&quot;input-group-text&quot;&gt;Project&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;input #title&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;project.title&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;title&quot; type&#x3D;&quot;text&quot;
+                 [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: f.submitted &amp;&amp; title.invalid }&quot;
+                 required/&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Start &amp; end date--&gt;
+            &lt;div class&#x3D;&quot;row col-sm-6 col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                &lt;div class&#x3D;&quot;input-group-text&quot;&gt;
+                  &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;isDateChkLabel&quot;
+                         (ng-model)&#x3D;&quot;isDateChecked&quot; id&#x3D;&quot;dateChecked&quot;
+                         [checked]&#x3D;&quot;isDateChecked&quot;
+                         (change)&#x3D;&quot;changeChkBox($event)&quot;&gt;
+                  &lt;label for&#x3D;&quot;inputStartDate&quot; class&#x3D;&quot;col-form-label&quot;&gt;Start Date:&lt;/label&gt;
+                  &lt;input #startDate&#x3D;&quot;ngModel&quot; id&#x3D;&quot;inputStartDate&quot; [(ngModel)]&#x3D;&quot;project.startDate&quot;
+                         style&#x3D;&quot;width:175px&quot;
+                         [disabled]&#x3D;!isDateChecked class&#x3D;&quot;form-control&quot; name&#x3D;&quot;stDate&quot; type&#x3D;&quot;date&quot; /&gt;
+                  &lt;label for&#x3D;&quot;inputEndDate&quot; class&#x3D;&quot;col-form-label&quot;&gt;End Date:&lt;/label&gt;
+                  &lt;input #endDate&#x3D;&quot;ngModel&quot; id&#x3D;&quot;inputEndDate&quot; [(ngModel)]&#x3D;&quot;project.endDate&quot;
+                         style&#x3D;&quot;width:175px&quot;
+                         [disabled]&#x3D;!isDateChecked class&#x3D;&quot;form-control&quot; name&#x3D;&quot;etDate&quot; type&#x3D;&quot;date&quot; /&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--Priority  --&gt;
+            &lt;div class&#x3D;&quot;row col-sm-6 col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                &lt;div class&#x3D;&quot;input-group-prepend&quot;&gt;
+                  &lt;span class&#x3D;&quot;input-group-text&quot;&gt;Priority&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;input #priority&#x3D;&quot;ngModel&quot; [(ngModel)]&#x3D;&quot;project.priority&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;priority&quot; type&#x3D;&quot;range&quot;
+                       [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: f.submitted &amp;&amp; priority.invalid }&quot;
+                       required/&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--Manager --&gt;
+            &lt;div class&#x3D;&quot;row col-sm-6 col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                &lt;div class&#x3D;&quot;input-group-prepend&quot;&gt;
+                  &lt;span class&#x3D;&quot;input-group-text&quot;&gt;Manager&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;empId&quot; name&#x3D;&quot;empId&quot; [(ngModel)]&#x3D;&quot;empId&quot;
+                        (ngModelChange)&#x3D;&quot;saveUser()&quot;&gt;
+                  &lt;option *ngFor&#x3D;&quot;let user of users&quot;
+                          value&#x3D;&quot;{{user.empId}}&quot;&gt;{{user.firstName}}-{{user.lastName}}&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;button class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;submit&quot; role&#x3D;&quot;button&quot; &gt;{{btnTitle}}&lt;/button&gt;
+        &lt;a class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;reset()&quot; role&#x3D;&quot;button&quot;&gt;Reset&lt;/a&gt;
+      &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;hr class&#x3D;&quot;style11&quot;&gt;
+  &lt;div class&#x3D;&quot;card&quot;&gt;
+    &lt;div class&#x3D;&quot;card-header&quot;&gt; Search &amp; Sort&lt;/div&gt;
+  &lt;!-- List Of Projects--&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;!-- Filter Section--&gt;
+    &lt;div&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-filter&quot;&gt;
+          &lt;label for&#x3D;&quot;filterStr&quot;&gt;Search&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;input type&#x3D;&quot;text&quot; size&#x3D;&quot;40&quot; [(ngModel)]&#x3D;&quot;filterStr&quot; name&#x3D;&quot;filterStr&quot;
+                                     class&#x3D;&quot;form-control&quot;
+                                     id&#x3D;&quot;filterStr&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-filter&quot;&gt;&lt;label&gt;Sort:&lt;/label&gt;&lt;/div&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary btn-sm mr-3&quot; (click)&#x3D;&quot;sortByStartDate()&quot;&gt;Start Date&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary btn-sm mr-3&quot; (click)&#x3D;&quot;sortByEndDate()&quot;&gt;End Date&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary btn-sm mr-3&quot; (click)&#x3D;&quot;sortByPriority()&quot;&gt;Priority&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary btn-sm mr-3&quot; (click)&#x3D;&quot;sortByCompleted()&quot;&gt;Completed&lt;/button&gt;
+        &lt;button type&#x3D;&quot;reset&quot; class&#x3D;&quot;btn btn-primary btn-sm mr-3&quot; (click)&#x3D;&quot;resetFilter()&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;card&quot;&gt;
+    &lt;div class&#x3D;&quot;card-header&quot;&gt;Projects&lt;/div&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;table class&#x3D;&quot;table table-hover align-san&quot;&gt;
+        &lt;tbody class&#x3D;&quot;tbody&quot;&gt;
+        &lt;tr *ngFor&#x3D;&quot;let p of filteredPrj | projectFilter : filterStr&quot;&gt;
+          &lt;td&gt;
+            &lt;table class&#x3D;&quot;inner-table&quot;&gt;
+              &lt;tr&gt;
+                &lt;td colspan&#x3D;&quot;4&quot;&gt;&lt;b&gt;Project:&lt;/b&gt; {{p.title}}&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Start Date:&lt;/b&gt; {{p.startDate}}&lt;/td&gt;
+                &lt;td&gt;&lt;b&gt;End Date:&lt;/b&gt; {{p.endDate}}&lt;/td&gt;
+                &lt;td&gt;&lt;b&gt;Priority:&lt;/b&gt; {{p.priority}}&lt;/td&gt;
+                &lt;td&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary mr-3&quot; [disabled]&#x3D;isProjectExpired(p) (click)&#x3D;&quot;update(p)&quot;&gt;Update
+                  &lt;/button&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; [disabled]&#x3D;isProjectExpired(p) (click)&#x3D;&quot;endProject(p)&quot;&gt;Suspend
+                  &lt;/button&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./add-project.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row">    <div class="col-12">      <div class="card">        <div class="card-header"> Add Project</div>        <div class="card-body">          <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">            <!-- Project Title-->            <div class="row col-sm-6 col-md-6 ">              <div class="input-group">                <div class="input-group-prepend">                  <span class="input-group-text">Project</span>                </div>                <input #title="ngModel" [(ngModel)]="project.title" class="form-control" name="title" type="text"                 [ngClass]="{ \'is-invalid\': f.submitted && title.invalid }"                 required/>              </div>            </div>            <!-- Start & end date-->            <div class="row col-sm-6 col-md-6">              <div class="input-group">                <div class="input-group-text">                  <input type="checkbox" id="isDateChkLabel"                         (ng-model)="isDateChecked" id="dateChecked"                         [checked]="isDateChecked"                         (change)="changeChkBox($event)">                  <label for="inputStartDate" class="col-form-label">Start Date:</label>                  <input #startDate="ngModel" id="inputStartDate" [(ngModel)]="project.startDate"                         style="width:175px"                         [disabled]=!isDateChecked class="form-control" name="stDate" type="date" />                  <label for="inputEndDate" class="col-form-label">End Date:</label>                  <input #endDate="ngModel" id="inputEndDate" [(ngModel)]="project.endDate"                         style="width:175px"                         [disabled]=!isDateChecked class="form-control" name="etDate" type="date" />                </div>              </div>            </div>            <!--Priority  -->            <div class="row col-sm-6 col-md-6">              <div class="input-group">                <div class="input-group-prepend">                  <span class="input-group-text">Priority</span>                </div>                <input #priority="ngModel" [(ngModel)]="project.priority" class="form-control" name="priority" type="range"                       [ngClass]="{ \'is-invalid\': f.submitted && priority.invalid }"                       required/>              </div>            </div>            <!--Manager -->            <div class="row col-sm-6 col-md-6">              <div class="input-group">                <div class="input-group-prepend">                  <span class="input-group-text">Manager</span>                </div>                <select class="form-control" id="empId" name="empId" [(ngModel)]="empId"                        (ngModelChange)="saveUser()">                  <option *ngFor="let user of users"                          value="{{user.empId}}">{{user.firstName}}-{{user.lastName}}</option>                </select>              </div>            </div>        <button class="btn btn-primary" type="submit" role="button" >{{btnTitle}}</button>        <a class="btn btn-primary" (click)="reset()" role="button">Reset</a>      </form>        </div>      </div>    </div>  </div>  <hr class="style11">  <div class="card">    <div class="card-header"> Search & Sort</div>  <!-- List Of Projects-->    <div class="card-body">    <!-- Filter Section-->    <div>      <div class="row">        <div class="col-filter">          <label for="filterStr">Search</label>        </div>        <div>          <input type="text" size="40" [(ngModel)]="filterStr" name="filterStr"                                     class="form-control"                                     id="filterStr">        </div>      </div>      <div class="row">        <div class="col-filter"><label>Sort:</label></div>        <button type="button" class="btn btn-primary btn-sm mr-3" (click)="sortByStartDate()">Start Date</button>        <button type="button" class="btn btn-primary btn-sm mr-3" (click)="sortByEndDate()">End Date</button>        <button type="button" class="btn btn-primary btn-sm mr-3" (click)="sortByPriority()">Priority</button>        <button type="button" class="btn btn-primary btn-sm mr-3" (click)="sortByCompleted()">Completed</button>        <button type="reset" class="btn btn-primary btn-sm mr-3" (click)="resetFilter()">Reset</button>      </div>    </div>  </div>  </div>  <div class="card">    <div class="card-header">Projects</div>    <div class="card-body">      <table class="table table-hover align-san">        <tbody class="tbody">        <tr *ngFor="let p of filteredPrj | projectFilter : filterStr">          <td>            <table class="inner-table">              <tr>                <td colspan="4"><b>Project:</b> {{p.title}}</td>              </tr>              <tr>                <td><b>Start Date:</b> {{p.startDate}}</td>                <td><b>End Date:</b> {{p.endDate}}</td>                <td><b>Priority:</b> {{p.priority}}</td>                <td>                  <button type="button" class="btn btn-primary mr-3" [disabled]=isProjectExpired(p) (click)="update(p)">Update                  </button>                  <button type="button" class="btn btn-primary" [disabled]=isProjectExpired(p) (click)="endProject(p)">Suspend                  </button>                </td>              </tr>            </table>          </td>        </tr>        </tbody>      </table>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddProjectComponent', 'selector': 'app-add-project'},{'name': 'AddUserComponent', 'selector': 'app-add-user'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'TaskAddComponent', 'selector': 'app-task-add'},{'name': 'TaskUpdateComponent', 'selector': 'app-task-update'},{'name': 'TaskViewComponent', 'selector': 'app-task-view'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddProjectComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddProjectComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

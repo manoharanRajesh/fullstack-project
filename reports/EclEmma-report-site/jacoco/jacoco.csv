@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+service,com.fsd.project.manager.service.service,ProjectService,0,125,0,10,0,27,0,13,0,8
+service,com.fsd.project.manager.service.service,TaskService,0,142,0,10,0,29,0,15,0,10
+service,com.fsd.project.manager.service.service,UserService,1,101,2,8,0,22,2,12,0,9
+service,com.fsd.project.manager.service.service.translator,UserTranslate,0,31,0,0,0,6,0,4,0,4
+service,com.fsd.project.manager.service.service.translator,TaskTranslate,0,88,0,0,0,25,0,4,0,4
+service,com.fsd.project.manager.service.service.translator,ProjectTranslator,0,98,0,0,0,21,0,6,0,6
+service,com.fsd.project.manager.service.dao.data,Project,0,21,0,0,0,9,0,2,0,2
+service,com.fsd.project.manager.service.dao.data,User,0,32,0,0,0,7,0,3,0,3
+service,com.fsd.project.manager.service.controllers,ProjectController,0,26,0,2,0,8,0,6,0,5
+service,com.fsd.project.manager.service.controllers,UserController,0,26,0,2,0,8,0,6,0,5
+service,com.fsd.project.manager.service.controllers,TaskController,0,26,0,2,0,8,0,6,0,5
+service,com.fsd.project.manager.service,ServiceApplication,5,3,0,0,2,1,1,1,1,1
